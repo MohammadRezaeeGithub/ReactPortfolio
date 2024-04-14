@@ -23,6 +23,12 @@ import {
   jobit,
   tripguide,
   threejs,
+  php,
+  laravel,
+  sql,
+  vue,
+  android,
+  java,
 } from "../assets";
 
 export const navLinks = [
@@ -33,6 +39,14 @@ export const navLinks = [
   {
     id: "work",
     title: "Work",
+  },
+  {
+    id: "skills",
+    title: "skills",
+  },
+  {
+    id: "projects",
+    title: "projects",
   },
   {
     id: "contact",
@@ -46,7 +60,7 @@ const services = [
     icon: web,
   },
   {
-    title: "React Native Developer",
+    title: "Mobile Developer",
     icon: mobile,
   },
   {
@@ -54,7 +68,7 @@ const services = [
     icon: backend,
   },
   {
-    title: "Content Creator",
+    title: "Front-end Developer",
     icon: creator,
   },
 ];
@@ -73,12 +87,28 @@ const technologies = [
     icon: javascript,
   },
   {
-    name: "TypeScript",
-    icon: typescript,
+    name: "PHP",
+    icon: php,
+  },
+  {
+    name: "Laravel",
+    icon: laravel,
+  },
+  {
+    name: "Java",
+    icon: java,
+  },
+  {
+    name: "Android",
+    icon: android,
   },
   {
     name: "React JS",
     icon: reactjs,
+  },
+  {
+    name: "Vue JS",
+    icon: vue,
   },
   {
     name: "Redux Toolkit",
@@ -89,12 +119,8 @@ const technologies = [
     icon: tailwind,
   },
   {
-    name: "Node JS",
-    icon: nodejs,
-  },
-  {
-    name: "MongoDB",
-    icon: mongodb,
+    name: "SQL",
+    icon: sql,
   },
   {
     name: "Three JS",
@@ -107,10 +133,6 @@ const technologies = [
   {
     name: "figma",
     icon: figma,
-  },
-  {
-    name: "docker",
-    icon: docker,
   },
 ];
 

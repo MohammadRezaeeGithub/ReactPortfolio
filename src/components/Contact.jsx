@@ -5,6 +5,7 @@ import emailjs from "@emailjs/browser";
 import { EarthCanvas } from "./canvas";
 import { slideIn } from "../utils/motion";
 import { SectionWrapper } from "../hocs";
+import Swal from "sweetalert2";
 
 //template_dc346he
 //service_bm28kzi
@@ -21,9 +22,55 @@ const Contact = () => {
 
   const [loading, setLoading] = useState(false);
 
-  const handleChange = (e) => {};
+  const handleChange = (e) => {
+    const { name, value } = e.target;
 
-  const handleSubmit = (e) => {};
+    setForm({ ...form, [name]: value });
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    setLoading(true);
+
+    emailjs
+      .send(
+        "service_bm28kzi",
+        "template_dc346he",
+        {
+          from_name: form.name,
+          to_name: "Mohammad",
+          from_email: form.email,
+          to_email: "mohammadrezaee22@gmail.com",
+          message: form.message,
+        },
+        "b8nKwt1XPDbCWvMsD"
+      )
+      .then(
+        (result) => {
+          setLoading(false);
+          Swal.fire({
+            title: "Your email has been sent!",
+            text: "I will come back to you soon.!",
+            icon: "success",
+          });
+          setForm({
+            name: "",
+            email: "",
+            message: "",
+          });
+        },
+        (error) => {
+          setLoading(false);
+
+          Swal.fire({
+            icon: "error",
+            title: "Oops...",
+            text: "Something went wrong!",
+          });
+        }
+      );
+  };
 
   return (
     <SectionWrapper idName="contact">

@@ -1,4 +1,4 @@
-import logo from "./logo.svg";
+import logo from "./logo.png";
 import backend from "./backend.png";
 import creator from "./creator.png";
 import mobile from "./mobile.png";
@@ -20,6 +20,12 @@ import redux from "./tech/redux.png";
 import tailwind from "./tech/tailwind.png";
 import typescript from "./tech/typescript.png";
 import threejs from "./tech/threejs.svg";
+import php from "./tech/php.jpg";
+import laravel from "./tech/laravel.png";
+import sql from "./tech/sql.png";
+import vue from "./tech/vue.png";
+import java from "./tech/java.jpg";
+import android from "./tech/android.png";
 
 import meta from "./company/meta.png";
 import shopify from "./company/shopify.png";
@@ -31,6 +37,12 @@ import jobit from "./jobit.png";
 import tripguide from "./tripguide.png";
 
 export {
+  android,
+  java,
+  php,
+  laravel,
+  sql,
+  vue,
   logo,
   backend,
   creator,
